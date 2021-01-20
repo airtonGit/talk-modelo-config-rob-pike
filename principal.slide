@@ -1,4 +1,4 @@
-# Modelo de configuração de 1 ano de experimentos de Rob Pike: Functional Options
+Modelo de configuração de 1 ano de experimentos de Rob Pike: Functional Options
 19 Janeiro 2021
 
 Airton F S Oliveira
@@ -6,7 +6,7 @@ Especialista em Engenharia de Software, Tempest
 airton.oliveira@tempest.com.br
 
 
-## Rob Pike 
+* Rob Pike
 
 - Um dos criadores da linguagem GO
 - Além da linguagem em si também apresenta soluções inovadoras adotadas pela indústria
@@ -17,14 +17,14 @@ airton.oliveira@tempest.com.br
   + Claro é melhor que esperto
 
 
-## Desafio: como configurar structs, services que podem ter dezenas de configurações?
+* Desafio: como configurar structs, services que podem ter dezenas de configurações?
 
 - Assinatura de funções de criação `New...` (_constructor_) com muitos parâmetros
 - Ao ser necessário evoluir o código novos paramêtros precisam ser adicionados ou criar novas funções `New` (_constructor_)
 - Novos parâmetros nas funções quebra os utilizadores obrigando a uma versão major X.0.0
 - Utilizar serviços que precisam de muitos paramêtros gera uma complexidade maior para uma parte dos utilizadores que não precisam de todo o universo de configurações possíveis.
 
-## Exemplo simples
+* Exemplo simples
 
 Como configurar uma casa, opções podem ser as cores das paredes, quantidade de quartos
 quantidade de banheiros, material das paredes, piso e do telhado. Entre muitos outras possibilidades que já
@@ -39,7 +39,7 @@ Com o tempo e novas 'funcionalidades' na v2:
 .code v2/casa_v2.go /^func NewCasa/,/^}/
 
 
-## Solução:
+* Solução:
 
 Configuração com a passagem de **funções** de 
 configuração em **assinatura variádica**, também conhecido como:
@@ -55,7 +55,7 @@ _Functional Options_
 
 .code v3/casa_v3.go /^func.*Configurar/,/^}/
 
-## Opções em forma de funções
+* Opções em forma de funções
 
 Para ofertar opções de configuração em forma de parâmetros são disponibilizadas
 funções de configuração
@@ -70,7 +70,7 @@ Opção com parâmetro
 
 : Este exemplo está redundante apenas para demonstrar como seria a utilização
 
-## Conclusão
+* Conclusão
 
 A utilização deste modelo de configuração mantém retro-compatibilidade em versões novas.
 Simplicidade de utilização nos cenários mais comuns com menos customização.
@@ -81,7 +81,7 @@ Mantém checagem estática do código na identificação de falhas de programaç
 .code v3/casa_v3.go /^func opQuantidadeQuartos/,/^}/
 .code v3/casa_v3.go /^//HL10START/,/^//HL10END/ HL10
 
-## Obrigado!
+* Obrigado!
 
 Referências:
 
