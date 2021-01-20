@@ -1,6 +1,6 @@
 Modelo de configuração de 1 ano de experimentos de Rob Pike
 Functional Options
-19 Janeiro 2021
+19 January 2021
 
 Airton F S Oliveira
 Especialista em Engenharia de Software, Tempest
@@ -12,10 +12,10 @@ airton.oliveira@tempest.com.br
 - Um dos criadores da linguagem GO
 - Além da linguagem em si também apresenta soluções inovadoras adotadas pela indústria
 - Criou os Provérbios de GO alguns:
-  + Faça do valor zero útil
-  + Uma pequena cópia é melhor que uma pequena dependência
-  + Concorrência não é Paralelismo
-  + Claro é melhor que esperto
+  - Faça do valor zero útil
+  - Uma pequena cópia é melhor que uma pequena dependência
+  - Concorrência não é Paralelismo
+  - Claro é melhor que esperto
 
 
 * Desafio: como configurar structs, services que podem ter dezenas de configurações?
@@ -46,8 +46,8 @@ Configuração com a passagem de **funções** de
 configuração em **assinatura variádica**, também conhecido como:
 _Functional Options_
 
-* Função New (_constructor_) recebe parâmetros (essênciais)
-* Função Configure recebe 1 ou mais options
+- Função New (_constructor_) recebe parâmetros (essênciais)
+- Função Configure recebe 1 ou mais options
 
 : Método Configurar tem acesso privado e empresta a option func a referência do objeto
 : assim a mesma pode setar os parâmetros
@@ -86,5 +86,5 @@ Mantém checagem estática do código na identificação de falhas de programaç
 
 Referências:
 
-+ https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html
-+ https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
+- https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html
+- https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
