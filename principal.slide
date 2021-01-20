@@ -32,11 +32,11 @@ previstas e muitas outras que ainda virão no futuro...
 
 Começa simples v1:
 
-.code /v1/casa_v1.go /^func NewCasa/,/^}/
+.code v1/casa_v1.go /^func NewCasa/,/^}/
 
 Com o tempo e novas 'funcionalidades' na v2:
 
-.code /v2/casa_v2.go /^func NewCasa/,/^}/
+.code v2/casa_v2.go /^func NewCasa/,/^}/
 
 
 ## Solução:
@@ -51,9 +51,9 @@ _Functional Options_
 : Método Configurar tem acesso privado e empresta a option func a referência do objeto
 : assim a mesma pode setar os parâmetros
 
-.code /v3/casa_v3.go /^type option/,/^$/
+.code v3/casa_v3.go /^type option/,/^$/
 
-.code /v3/casa_v3.go /^func.*Configurar/,/^}/
+.code v3/casa_v3.go /^func.*Configurar/,/^}/
 
 ## Opções em forma de funções
 
@@ -62,11 +62,11 @@ funções de configuração
 
 Opção simples
 
-.code /v3/casa_v3.go /^func opParedeAzul/,/^}/
+.code v3/casa_v3.go /^func opParedeAzul/,/^}/
 
 Opção com parâmetro
 
-.code /v3/casa_v3.go /^func opQuantidadeQuartos/,/^}/
+.code v3/casa_v3.go /^func opQuantidadeQuartos/,/^}/
 
 : Este exemplo está redundante apenas para demonstrar como seria a utilização
 
@@ -76,10 +76,10 @@ A utilização deste modelo de configuração mantém retro-compatibilidade em v
 Simplicidade de utilização nos cenários mais comuns com menos customização.
 Mantém checagem estática do código na identificação de falhas de programação.
 
-.code /v3/casa_v3.go /^type option/,/^$/
-.code /v3/casa_v3.go /^func.*Configurar/,/^}/
-.code /v3/casa_v3.go /^func opQuantidadeQuartos/,/^}/
-.code /v3/casa_v3.go /^//HL10START/,/^//HL10END/ HL10
+.code v3/casa_v3.go /^type option/,/^$/
+.code v3/casa_v3.go /^func.*Configurar/,/^}/
+.code v3/casa_v3.go /^func opQuantidadeQuartos/,/^}/
+.code v3/casa_v3.go /^//HL10START/,/^//HL10END/ HL10
 
 ## Obrigado
 
